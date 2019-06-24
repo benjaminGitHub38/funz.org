@@ -14,7 +14,7 @@ You need Ruby and gem before starting, then:
 gem install bundler
 
 # clone the project
-git clone https://github.com/IRSN/funz.org.git
+git clone https://github.com/Funz/funz.org.git
 cd funz.org
 
 # run jekyll with dependencies
