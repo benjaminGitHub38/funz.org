@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Funz</title>
+    <meta name="description" content="Funz project website.">
+
+
+    <link rel="stylesheet" href="/www/css/main.css">
+    <link rel="stylesheet" href="/www/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/www/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>Funz | Funz project website.</title>
+<meta property="og:title" content="Funz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Funz project website." />
+<meta property="og:description" content="Funz project website." />
+<link rel="canonical" href="http://localhost:4000/www/" />
+<meta property="og:url" content="http://localhost:4000/www/" />
+<meta property="og:site_name" content="Funz" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebSite","name":"Funz","headline":"Funz","description":"Funz project website.","url":"http://localhost:4000/www/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://localhost:4000/www/">
+    <link rel="alternate" type="application/rss+xml" title="Funz" href="http://localhost:4000/www/feed.xml" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109580-22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109580-22');
+</script>
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/www/">
+                <span><img src="/www/img/logonav.png"></span> Funz
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/www/docs/home/">Docs</a></li>
+                <li ><a href="/www/blog/2018/09/01/funz/">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/Funz"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="header-container jumbotron">
+    <div class="container">
+        <h1>Standardize your simulation as a function.</h1>
+        <p><i><b>Funz</b></i> is a parametric & parallel remote execution engine to wrap scientific computing as a function.
+            <br/>Then, just use it as an objective function for any standard algorithm (eg. optimization).
+        </p>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-9">
+            <h2 class="header-light regular-pad">TL;DR</h2>
+            <h3>Parametric scientific computing ?</h3>
+            <blockquote>
+              <p>
+              <ol>
+                <li>Take a "parametrized" input file (contains <code>$x</code>, <code>$y</code>,... replacing some numerical values),</li>
+                <li>Define values taken by these parameter (or let a dedicated algorithm do),</li>
+                <li>Run calculations on remote ressources,</li>
+                <li>Parse results & analyse.</li>
+              </ol>
+              Funz eases this "functional" wrapping of your simulation.
+              </p>
+            </blockquote>
+        </div>
+        <div class="col-md-3 text-center">
+            <img src="img/logo.png" alt="" class="img-responsive">
+        </div>    
+        <div class="col-md-12">
+            <h3>Examples ?</h3>
+            <blockquote>
+              Funz makes your simulations callable as functions for any of <strong>cmd.exe</strong> / <strong>bash</strong> / <strong>python</strong> / <strong>R</strong> / <strong>Java</strong>:
+              <br/>
+              <ul>
+               
+                <li>From <strong>Excel</strong> spreadsheet "sheet.xlsx", get <strong>cell commented with "=total"</strong> for each 10 different values of <strong>cell commented with "$income"</strong>:
+                  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Funz.bat Run -m Excel -if sheet.xlsx -iv <span class="nv">income</span><span class="o">=</span>10,20,30,35,40,42,45,47,50,52 -oe total</code></pre></figure></li>
+               
+                <li>Search <strong>convection coefficient</strong> which leads to a minimal temperature of <strong>25.5</strong> degrees with <strong>OpenModelica</strong> PDE solver:
+                  <figure class="highlight"><pre><code class="language-bash" data-lang="bash">Funz.sh RunDesign -m OpenModelica -if NewtonCooling.mo -iv <span class="nv">convection</span><span class="o">=[</span>0.5,1.0] -oe <span class="s2">"min(T)"</span> -d Brent -do <span class="nv">ytarget</span><span class="o">=</span>25.5</code></pre></figure></li>
+               
+                <li>Build a <strong>response surface</strong> of MySimulator for <code>x1</code> in <code>[-5,5]</code> and <code>x2</code> in <code>[-5,5]</code>:
+                  <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">runFile</span><span class="p">(</span><span class="s">"Funz.py"</span><span class="p">)</span>
+<span class="n">Funz_init</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x1'</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">),</span><span class="s">'x2'</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)}</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">Funz_Run</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s">"MySimulator"</span><span class="p">,</span><span class="n">input_files</span><span class="o">=</span><span class="p">[</span><span class="s">"inputfile1"</span><span class="p">,</span><span class="s">"inputfile2"</span><span class="p">],</span><span class="n">input_variables</span><span class="o">=</span> <span class="n">X</span> <span class="p">,</span><span class="n">is_factorial</span><span class="o">=</span><span class="bp">True</span><span class="p">)[</span><span class="s">'y'</span><span class="p">]</span>
+<span class="c"># mplt.plot_surface(X['x1'], X['x2'], y)</span></code></pre></figure></li>
+              
+                <li>Propagate <code>x1</code> as uniform random and <code>x2</code> as normal random <strong>uncertainties</strong> through MySimulator:
+                  <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">source</span><span class="p">(</span><span class="s2">"Funz.R"</span><span class="p">)</span><span class="w">
+</span><span class="n">Funz.init</span><span class="p">()</span><span class="w">
+</span><span class="n">hist</span><span class="p">(</span><span class="w"> </span><span class="n">Funz.Run</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"MySimulator"</span><span class="p">,</span><span class="n">input.files</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"inputfile1"</span><span class="p">,</span><span class="s2">"inputfile2"</span><span class="p">),</span><span class="n">input.variables</span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">x</span><span class="m">1</span><span class="o">=</span><span class="n">runif</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="n">x</span><span class="m">2</span><span class="o">=</span><span class="n">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">))</span><span class="w"> </span><span class="p">)[</span><span class="s1">'y'</span><span class="p">]</span><span class="w"> </span><span class="p">)</span></code></pre></figure></li>
+       
+                <li><strong>Chain</strong> multi-physics simulations</li>
+      
+        <li>Identify the <strong>most influent input</strong> parameters</li>
+     
+        <li><strong>Max/minimize</strong> simulation output value</li>
+     
+        <li>Build <strong>inverse</strong> model</li>
+     
+              </ul>
+            </blockquote>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <h2 class="header-light regular-pad">Overview</h2>
+        <div class="col-sm-4">
+            <h1 class="text-center"><i class="fa fa-gift" aria-hidden="true"></i></h1>
+            <h3 class="text-center">Wrapping</h3>
+            <p>
+              <ul>
+                <li>A standardized <strong>execution script</strong> (properly exiting when calcualtion failed),</li>
+                <li>A set of <strong>reserved characters</strong> (like '$') for input files parametrization,</li>
+                <li>Some <strong>regular expression</strong> to extract output values of interest.</li>
+              </ul>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
+            <h3 class="text-center">Features</h3>
+            <p>
+              <ol>
+                <li>Parse & compile <strong>input files</strong> with given parametric syntax,</li>
+                <li>Launch <strong>remote execution</strong> of each input combination given (async on dedicated TCP channel),</li>
+                <li>Call <strong>external algotihm</strong> to drive calculation parameters values,</li>
+                <li>Monitor & restart failed calculations (blacklisting unsuitable computers),</li>
+                <li>Store & parse <strong>output results</strong>.</li>
+              </ol>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <h1 class="text-center"><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
+            <h3 class="text-center">Extensibility</h3>
+            <p>
+             <ul>
+                <li>Wrapper for any <strong>simulation software</strong> (holds I/O files, ASCII & common formats: HDF5 NetCDF XML JSON),</li>
+                <li>Algorithm for <strong>design of experiments</strong> (supports definition of input values regarding engineering objective).</li>
+             </ul>
+            </p>
+        </div>
+    </div>
+
+        <hr>
+
+    <div class="row">
+        <h2 class="header-light regular-pad">In depth</h2>
+        <br/>
+        <div class="col-sm-4 text-center">
+            <a class="btn btn-primary btn-lg" href="/www/allposts" role="button">blog & examples</a>
+        </div>
+         <div class="col-sm-4 text-center">
+            <a class="btn btn-primary btn-lg" href="/www/docs/home/" role="button">doc & reference</a>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a class="btn btn-primary btn-lg" href="https://github.com/Funz" role="button">Repository</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-3">
+            <img src="img/logo_Irsn.png" alt="" class="img-responsive">
+        </div>
+        <div class="col-md-9">
+            <h2 class="header-light regular-pad">Who we are ?</h2>
+            Early versions of Funz project were funded by <a href="https://www.irsn.fr/EN">IRSN</a> (French institute for radiological protection and nuclear safety). <br/>IRSN open-sourced Funz in 2019 to support safety and design engineering community.
+        </div>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Funz 2019 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/www'
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/www/js/bootstrap.min.js "></script>
+<script src="/www/js/typeahead.bundle.min.js "></script>
+
+<script src="/www/js/main.js "></script>
+
+</body>
+
+</html>

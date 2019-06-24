@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Demo</title>
+    <meta name="description" content="Requirements">
+
+
+    <link rel="stylesheet" href="/www/css/main.css">
+    <link rel="stylesheet" href="/www/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/www/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>Demo | Funz</title>
+<meta property="og:title" content="Demo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Requirements" />
+<meta property="og:description" content="Requirements" />
+<link rel="canonical" href="http://localhost:4000/www/docs/demo/" />
+<meta property="og:url" content="http://localhost:4000/www/docs/demo/" />
+<meta property="og:site_name" content="Funz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-24T10:43:20+02:00" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebPage","headline":"Demo","datePublished":"2019-06-24T10:43:20+02:00","dateModified":"2019-06-24T10:43:20+02:00","description":"Requirements","url":"http://localhost:4000/www/docs/demo/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://localhost:4000/www/docs/demo/">
+    <link rel="alternate" type="application/rss+xml" title="Funz" href="http://localhost:4000/www/feed.xml" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109580-22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109580-22');
+</script>
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/www/">
+                <span><img src="/www/img/logonav.png"></span> Funz
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li  class="active" ><a href="/www/docs/home/">Docs</a></li>
+                <li ><a href="/www/blog/2018/09/01/funz/">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/Funz"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+          Getting Started
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item active" href="/www/docs/demo/">Demo</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/install/">Install</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/usage/">Usage</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/wrap/">Wrap</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          Reference
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/simulation_io/">Simulations I/O</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/design_algorithm/">Design & algorithms</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/network/">Networking</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/storage/">Storage</a>
+        
+          
+          
+          <a class="list-group-item " href="/www"></a>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Demo</h1>
+            <div id="markdown-content-container"><h2 id="requirements">Requirements</h2>
+
+<p>The following demo steps are intended to work after this setup. 
+We arbitrary choose Modelica as a target code example, but you can use any other already available in https://github.com/Funz .</p>
+
+<ul>
+  <li>install OpenModelica on your platform from <a href="https://openmodelica.org">OpenModelica website</a>, so <code class="highlighter-rouge">omc</code> command will be recognized in your <code class="highlighter-rouge">PATH</code></li>
+  <li>get Funz-Modelica distribution: https://github.com/Funz/plugin-Modelica/releases/… (which also include some basic algorithms like gradient descent optimization and root finding)</li>
+  <li>unzip in current test directory: <code class="highlighter-rouge">unzip Funz-Modelica.zip</code></li>
+  <li>move in test directory: <code class="highlighter-rouge">cd Funz-Modelica</code></li>
+  <li>wake up the 4 Funz ‘daemons’ which will provide calculation services: <code class="highlighter-rouge">./FunzDaemon_start.sh 4</code></li>
+</ul>
+
+<p>We will then work on the ‘NewtonCooling’ example, which solves a basic PDE on temperature, provided in the <code class="highlighter-rouge">Funz-Modelica/samples</code> directory:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>// @ref http://book.xogeny.com/behavior/equations/physical/
+model NewtonCooling "An example of Newton's law of cooling"
+  parameter Real T_inf=25 "Ambient temperature";
+  parameter Real T0=90 "Initial temperature";
+  parameter Real h=0.7 "Convective cooling coefficient";
+  parameter Real A=1.0 "Surface area";
+  parameter Real m=0.1 "Mass of thermal capacitance";
+  parameter Real c_p=1.2 "Specific heat";
+  Real T "Temperature";
+initial equation
+  T = T0 "Specify initial value for T";
+equation
+  m*c_p*der(T) = h*A*(T_inf-T) "Newton's law of cooling";
+end NewtonCooling;
+</code></pre>
+</div>
+<p>Our engineering goal is to adjust cooling convection in order to control the minimum temperature reached.
+So, in order to ‘Funzify’ this model, we will just replace the numerical value of the convection coefficient by a parametrized expression:</p>
+<pre class="highlight"><code>// @ref http://book.xogeny.com/behavior/equations/physical/
+model NewtonCooling "An example of Newton's law of cooling"
+  parameter Real T_inf=25 "Ambient temperature";
+  parameter Real T0=90 "Initial temperature";
+  parameter Real h=<font style="background-color:rgb(255,200,0)">$convection</font> "Convective cooling coefficient";
+  parameter Real A=1.0 "Surface area";
+  parameter Real m=0.1 "Mass of thermal capacitance";
+  parameter Real c_p=1.2 "Specific heat";
+  Real T "Temperature";
+initial equation
+  T = T0 "Specify initial value for T";
+equation
+  m*c_p*der(T) = h*A*(T_inf-T) "Newton's law of cooling";
+end NewtonCooling;
+</code></pre>
+<p>… and now play with this ‘functional’ wraping …</p>
+
+<h2 id="command-line">Command-line</h2>
+
+<p>We use <code class="highlighter-rouge">Funz.sh</code> (or <code class="highlighter-rouge">Funz.bat</code>) to launch Funz calculations from command-line <code class="highlighter-rouge">bash</code> (or <code class="highlighter-rouge">cmd.exe</code>).</p>
+
+<h3 id="basic-parametric-run">Basic parametric run</h3>
+
+<p>Launching 4 calculations for different <code class="highlighter-rouge">convection</code> values (0.5, 0.6, 0.7, 0.8) is done as follows:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>./Funz.sh Run -m Modelica -if samples/NewtonCooling.mo.par -iv <span class="nv">convection</span><span class="o">=</span>0.5,0.6,0.7,0.8,0.9,1.0 -oe <span class="s2">"min(T)"</span> -v 0 -pf <span class="s2">"convection"</span> <span class="s2">"min(T)"</span> <span class="s2">"info"</span>
+</code></pre>
+</div>
+<p>and returns:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>| convection | min(T)            | info          |
+|------------|-------------------|---------------|
+| 0.5        | 25.98653154436357 | Run succeded. |
+| 0.6        | 25.43373687652521 | Run succeded. |
+| 0.7        | 25.19937564256052 | Run succeded. |
+| 0.8        | 25.08828738995784 | Run succeded. |
+| 0.9        | 25.04045790290655 | Run succeded. |
+| 1.0        | 25.01947293170708 | Run succeded. |
+</code></pre>
+</div>
+
+<h3 id="algorithm-driven-root-finding">Algorithm-driven root finding</h3>
+
+<p>Now we will ask a (quite simple) algorithm to find the <code class="highlighter-rouge">convection</code> value leading to <code class="highlighter-rouge">min(T) = 0.3</code> (with relative precision of 0.01 on <code class="highlighter-rouge">convection</code> value):</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>./Funz.sh Run       -m Modelica -if samples/NewtonCooling.mo.par -iv <span class="nv">convection</span><span class="o">=</span>0.5,0.6,0.7,0.8,0.9,1.0 -oe <span class="s2">"min(T)"</span> -v 0 -pf <span class="s2">"convection"</span> <span class="s2">"min(T)"</span> <span class="s2">"info"</span>
+./Funz.sh RunDesign -m Modelica -if samples/NewtonCooling.mo.par -iv <span class="nv">convection</span><span class="o">=[</span>0.5,1.0] -oe <span class="s2">"min(T)"</span> -d Brent -do <span class="nv">ytarget</span><span class="o">=</span>25.2 <span class="nv">ytol</span><span class="o">=</span>0.01 -v 0
+</code></pre>
+</div>
+<p>which returns:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+</code></pre>
+</div>
+
+<h2 id="python">Python</h2>
+
+<h2 id="r">R</h2>
+
+<h2 id="java-api">Java (API)</h2>
+</div>
+            <p class="text-center">
+              <br />
+              <a target="_blank" href="https://github.com/Funz/www//_docs/demo.md" class="btn btn-default githubEditButton" role="button">
+                <i class="fa fa-pencil fa-lg"></i> Improve this page
+              </a>
+            </p>
+            <hr>
+            
+
+
+
+
+
+  
+  
+    <ul class="pager">
+      
+        <li class="previous disabled">
+          <a>
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/www/docs/install/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+    </div>
+    <div class="clear"></div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Funz 2019 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/www'
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/www/js/bootstrap.min.js "></script>
+<script src="/www/js/typeahead.bundle.min.js "></script>
+
+<script src="/www/js/main.js "></script>
+
+</body>
+
+</html>

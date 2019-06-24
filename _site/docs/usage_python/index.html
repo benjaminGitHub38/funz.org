@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Usage: Python</title>
+    <meta name="description" content="Requirements">
+
+
+    <link rel="stylesheet" href="/www/css/main.css">
+    <link rel="stylesheet" href="/www/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/www/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>Usage: Python | Funz</title>
+<meta property="og:title" content="Usage: Python" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Requirements" />
+<meta property="og:description" content="Requirements" />
+<link rel="canonical" href="http://localhost:4000/www/docs/usage_python/" />
+<meta property="og:url" content="http://localhost:4000/www/docs/usage_python/" />
+<meta property="og:site_name" content="Funz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-24T10:43:20+02:00" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebPage","headline":"Usage: Python","datePublished":"2019-06-24T10:43:20+02:00","dateModified":"2019-06-24T10:43:20+02:00","description":"Requirements","url":"http://localhost:4000/www/docs/usage_python/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://localhost:4000/www/docs/usage_python/">
+    <link rel="alternate" type="application/rss+xml" title="Funz" href="http://localhost:4000/www/feed.xml" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109580-22"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109580-22');
+</script>
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/www/">
+                <span><img src="/www/img/logonav.png"></span> Funz
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li  class="active" ><a href="/www/docs/home/">Docs</a></li>
+                <li ><a href="/www/blog/2018/09/01/funz/">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/Funz"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+          Getting Started
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/demo/">Demo</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/install/">Install</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/usage/">Usage</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/wrap/">Wrap</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          Reference
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/simulation_io/">Simulations I/O</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/design_algorithm/">Design & algorithms</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/network/">Networking</a>
+        
+          
+          
+          <a class="list-group-item " href="/www/docs/storage/">Storage</a>
+        
+          
+          
+          <a class="list-group-item " href="/www"></a>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Usage: Python</h1>
+            <div id="markdown-content-container"><h3 id="requirements">Requirements</h3>
+
+<ul>
+  <li>Python 3.x (should work with 2.x, but not officially supported)</li>
+  <li><a href="https://www.py4j.org/">py4j</a> library, to be install with <code class="highlighter-rouge">pip install py4j</code> (or see <a href="https://www.py4j.org/install.html">py4j install</a>)</li>
+</ul>
+
+<h3 id="loading-funz">Loading Funz</h3>
+
+<p>You need to load Funz with dedicated scipt: <code class="highlighter-rouge">python3 -i /opt/Funz/Funz.py</code> or load it interactively:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">exec</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">"/opt/Funz/Funz.py"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</code></pre>
+</div>
+<p>Then you can initialize Funz engine calling <code class="highlighter-rouge">Funz_init()</code> with following arguments:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">FUNZ_HOME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">'FUNZ_HOME'</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">java_control</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Xmx'</span><span class="p">:</span><span class="s">"512m"</span><span class="p">,</span><span class="s">'Xss'</span><span class="p">:</span><span class="s">"256k"</span><span class="p">}</span> <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="o">==</span><span class="s">"Windows"</span> <span class="k">else</span> <span class="p">{</span><span class="s">'Xmx'</span><span class="p">:</span><span class="s">"512m"</span><span class="p">}</span>
+<span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">**</span><span class="n">jvmargs</span>
+</code></pre>
+</div>
+<p>like:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Funz_init</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>which returns:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Initializing JVM ...
+    -Dapp.home=/opt/Funz
+    -Duser.language=en
+    -Duser.country=US
+    -Dverbosity=10
+    -Douterr=.Funz
+    -Xmx512m
+    -Djava.awt.headless=True
+  Loading java/lang/System ...
+Java Java(TM) SE Runtime Environment
+ version 1.8.0_201
+ from path /usr/lib/jvm/java-8-oracle/jre
+  Loading org/funz/Constants ...
+Funz 1.9 &lt;build 27/03/2019 15:05&gt;
+  Loading org/funz/api/Funz_v1 ...
+  Initializing Funz...
+  Funz models: bash cmd.exe Modelica
+  Funz designs: GradientDescent Brent
+</code></pre>
+</div>
+
+<h3 id="using">Using</h3>
+
+<p>Main features &amp; functions:</p>
+<ul>
+  <li>to run external parametric calculations of simulator <code class="highlighter-rouge">model</code> with input files <code class="highlighter-rouge">input_files</code>: <code class="highlighter-rouge">Funz_Run()</code> with following (default) arguments:
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">model</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">input_files</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">input_variables</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">is_factorial</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">output_expressions</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">run_control</span> <span class="o">=</span> <span class="p">{</span><span class="s">'force_retry'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s">'cache_dir'</span><span class="p">:</span><span class="bp">None</span><span class="p">}</span>
+<span class="n">archive_dir</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">log_file</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">monitor_control</span> <span class="o">=</span> <span class="p">{</span><span class="s">'sleep'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s">'display_fun'</span><span class="p">:</span><span class="bp">None</span><span class="p">}</span>
+</code></pre>
+    </div>
+  </li>
+  <li>to drive a python function <code class="highlighter-rouge">fun</code> by algorithm <code class="highlighter-rouge">design</code>: <code class="highlighter-rouge">Funz_Design()</code> with following (default) arguments:
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">fun</span> <span class="c"># python function to drive by algorithm</span>
+<span class="n">design</span> <span class="c"># algorithm to use</span>
+<span class="n">options</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">input_variables</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">fun_control</span> <span class="o">=</span> <span class="p">{</span><span class="s">'cache'</span><span class="p">:</span><span class="bp">False</span><span class="p">,</span><span class="s">'vectorize'</span><span class="p">:</span><span class="s">"for"</span><span class="p">,</span><span class="s">'vectorize_by'</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="n">monitor_control</span> <span class="o">=</span> <span class="p">{</span><span class="s">'results_tmp'</span><span class="p">:</span><span class="bp">True</span><span class="p">}</span>
+<span class="n">archive_dir</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">log_file</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="o">*</span><span class="n">vargs</span>
+</code></pre>
+    </div>
+  </li>
+  <li>to drive external parametric calculations of simulator <code class="highlighter-rouge">model</code> with input files <code class="highlighter-rouge">input_files</code> by algorithm <code class="highlighter-rouge">design</code>: <code class="highlighter-rouge">Funz_RunDesign()</code> with following (default) arguments:
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">model</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">input_files</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">output_expressions</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">design</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">input_variables</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">design_options</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">run_control</span> <span class="o">=</span> <span class="p">{</span><span class="s">'force_retry'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s">'cache_dir'</span><span class="p">:</span><span class="bp">None</span><span class="p">}</span>
+<span class="n">monitor_control</span> <span class="o">=</span> <span class="p">{</span><span class="s">'results_tmp'</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span><span class="s">'sleep'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="s">'display_fun'</span><span class="p">:</span><span class="bp">None</span><span class="p">}</span>
+<span class="n">archive_dir</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">log_file</span> <span class="o">=</span> <span class="bp">True</span>
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<p>Access to some intern features is also available:</p>
+<ul>
+  <li>parse parametric <code class="highlighter-rouge">input_files</code> to identify parameters and expected output from <code class="highlighter-rouge">model</code>:
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Funz_ParseInput</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">input_files</span><span class="p">)</span>
+</code></pre>
+    </div>
+  </li>
+  <li>parse &amp; compile parametric <code class="highlighter-rouge">input_files</code>  from <code class="highlighter-rouge">model</code> to replace parameters by <code class="highlighter-rouge">input_values</code>:
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Funz_CompileInput</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">input_files</span><span class="p">,</span><span class="n">input_values</span><span class="p">,</span><span class="n">output_dir</span><span class="o">=</span><span class="s">"."</span><span class="p">)</span>
+</code></pre>
+    </div>
+  </li>
+  <li>read output files in <code class="highlighter-rouge">output_dir</code> to get expected values of interest from <code class="highlighter-rouge">model</code> with <code class="highlighter-rouge">input_files</code>:
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Funz_ReadOutput</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">input_files</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">)</span>
+</code></pre>
+    </div>
+  </li>
+  <li>scan newtwork &amp; local computers suitable to launch calculations: <code class="highlighter-rouge">Funz_GridStatus()</code>, which returns:</li>
+</ul>
+<pre class="highlight"><div style="width: 1400px; overflow-x:scroll;"><code>| Computer | host name | OS              | address:port      | local status | since    | activity                               | codes          |
+|----------|-----------|-----------------|-------------------|--------------|----------|----------------------------------------|----------------|
+| neutro-1 | localhost | Linux 4.15.0-43 | 192.168.0.1:34485 | free         | 22:19:02 | idle (cpu=11.88;mem=26.18;disk=62.17;) | Modelica, bash |
+| neutro-2 | localhost | Linux 4.15.0-43 | 192.168.0.2:37265 | free         | 22:19:02 | idle (cpu=11.88;mem=26.18;disk=62.17;) | Modelica, bash |
+| neutro-3 | localhost | Linux 4.15.0-43 | 192.168.0.3:18925 | free         | 22:19:02 | idle (cpu=11.88;mem=26.18;disk=62.17;) | Modelica, bash |
+| neutro-4 | localhost | Linux 4.15.0-43 | 192.168.0.4:24495 | free         | 22:19:02 | idle (cpu=11.88;mem=26.18;disk=62.17;) | Modelica, bash |
+| neutro-5 | localhost | Linux 4.15.0-43 | 192.168.0.5:36544 | free         | 22:19:02 | idle (cpu=11.88;mem=26.18;disk=62.17;) | Modelica, bash |</code></div></pre>
+
+</div>
+            <p class="text-center">
+              <br />
+              <a target="_blank" href="https://github.com/Funz/www//_docs/usage_python.md" class="btn btn-default githubEditButton" role="button">
+                <i class="fa fa-pencil fa-lg"></i> Improve this page
+              </a>
+            </p>
+            <hr>
+            
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Funz 2019 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/www'
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/www/js/bootstrap.min.js "></script>
+<script src="/www/js/typeahead.bundle.min.js "></script>
+
+<script src="/www/js/main.js "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+[
+
+  
+    
+    
+    {
+      "title": "Demo",
+      "url": "/www/docs/demo/"
+
+    },
+  
+    
+    
+    {
+      "title": "Install",
+      "url": "/www/docs/install/"
+
+    },
+  
+    
+    
+    {
+      "title": "Usage",
+      "url": "/www/docs/usage/"
+
+    },
+  
+    
+    
+    {
+      "title": "Wrap",
+      "url": "/www/docs/wrap/"
+
+    },
+  
+
+  
+    
+    
+    {
+      "title": "Simulations I/O",
+      "url": "/www/docs/simulation_io/"
+
+    },
+  
+    
+    
+    {
+      "title": "Design & algorithms",
+      "url": "/www/docs/design_algorithm/"
+
+    },
+  
+    
+    
+    {
+      "title": "Networking",
+      "url": "/www/docs/network/"
+
+    },
+  
+    
+    
+    {
+      "title": "Storage",
+      "url": "/www/docs/storage/"
+
+    },
+  
+    
+    
+    {
+      "title": "",
+      "url": "/www"
+
+    },
+  
+
+
+  
+  {
+  "title": "Funz is published!",
+  "url": "/www/blog/2018/09/01/funz/"
+  }
+  
+]
