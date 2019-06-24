@@ -1,4 +1,4 @@
-This repository holds Funz project website available at: https://Funz.github.com/
+This repository holds Funz project website available at: https://github.com/Funz
 
 
 # Jekyll Doc Theme
