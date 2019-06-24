@@ -1,4 +1,4 @@
-This repository holds Funz project website available at: https://IRSN.github.com/funz.org
+This repository holds Funz project website available at: https://Funz.github.com/
 
 
 # Jekyll Doc Theme
