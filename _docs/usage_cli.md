@@ -3,8 +3,8 @@ title: "Usage: Command Line"
 permalink: /docs/usage_cli/
 ---
 
-For bash or cmd.exe, the usage pattern is the following `Funz.sh -h`:
-<pre class="highlight"><div style="width: 1000px; overflow-x:scroll;"><code>Usage: Funz.sh COMMAND [ARGS]
+For bash or cmd.exe, the usage pattern is the following `Funz.sh -h` or `Funz.bat -h`:
+<pre class="highlight"><div style="width: 1000px; overflow-x:scroll;"><code>Usage: Funz.(sh|bat) COMMAND [ARGS]
 
   Run ...             Launch (remote) calculations, replacing variables by given values
   Design ...          Apply an algorithm on an executable program returning target output value
