@@ -1,10 +1,5 @@
 This repository holds Funz project website available at: https://github.com/Funz
 
-
-# Jekyll Doc Theme
-
-Go to [the website](https://aksakalli.github.io/jekyll-doc-theme/) for detailed information and demo.
-
 ## Running locally
 
 You need Ruby and gem before starting, then:
@@ -21,6 +16,6 @@ cd funz.org
 bundle exec jekyll serve
 ```
 
-## License
+## Jekyll Doc Theme
 
-Released under [the MIT license](LICENSE).
+Go to [the website](https://aksakalli.github.io/jekyll-doc-theme/) for detailed information and demo about the Jekyll engine used here.

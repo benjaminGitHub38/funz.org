@@ -1,0 +1,100 @@
+---
+title: Plugin
+permalink: /docs/plugin/
+---
+
+## Overview
+
+Funz 'plugin' is the component that features funz to interact with all external simulation software.
+It mainly provides input/ouput parsing and launch scripts, but can also (optionally) provides a way to follow simulations progress, failover support, ...
+
+For conveniency, a [basic template](https://github.com/Funz/plugin-template) is provided and should be used as a scratch project.
+
+
+## Implementation
+
+### Requirements
+
+* Java 8 Runtime Environment (Dev Kit not needed)
+* ant
+* git (for github integration or checkout if needed)
+
+### Step-by-step
+
+These steps will guide you to build a basic plugin, which is sufficient for most of your needs. Nevertheless, it may be necessary to access lower level features (ie. Java plugin API) to solve some issues (eg. special binary format for output files, ...). Then, you should use the dedicated reference guide of this API: [plugin API](../io_parser/).
+
+1. __Checkout__ the plugin template: 
+  * [fork from github](https://github.com/Funz/plugin-template/generate) and clone: `git clone https://github.com/MyUserName/plugin-MyPluginName`
+  * [download plugin-template directory](https://github.com/Funz/plugin-template/archive/master.zip)
+2. Edit the __'build.xml'__ file to replace `MyPlugin` by the name of you plugin (usualy, the name of the simulation software)
+3. Edit the __'README.md'__ descritpion file:
+  * replace 'MyPlugin' by the name of your plugin
+  * choose the variable syntax and replace `$(` and `)` (`$` should be replaced by a reserved character unused in the code syntax)
+  * choose the formula syntax and replace `@{` and `}` (`$` should be replaced by a reserved character unused in the code syntax)
+  * change the comment character `#` by the one used in your code syntax
+  * provide a (small & simple) typical input file, containing some parameters
+```
+...
+... $(x1) ...
+... $(x2) ...
+...
+```
+  * manually replace 'x1' and 'x2', and run this file with your simulation code to get the output files
+  * select the main ouptut files contanining interest values (eg. by their extension), and give some sample:
+```
+...
+z= ...
+...
+```
+  * describe what output values are read
+4. According to previous choices, rename and implement the __'src/main/io/MyPlugin.ioplugin'__ file:
+    ```
+    variableStartSymbol=$
+    variableLimit=(...)
+    formulaStartSymbol=@
+    formulaLimit={...}
+    commentLineChar=#
+    
+    datasetFilter=contains("(.*)","print\\(")
+    ```
+5. Rename and adapt the shell script to launch the code __'src/main/scripts/MyPlugin.sh'__ and/or __'src/main/scripts/MyPlugin.bat'__,
+6. Provide (at least) one test case in __'src/test/cases/MyTestCase.in/'__, containing all input files of this test case, including the main file which is passed as argument to the '.sh' script:
+  * then, launch the simulation on all test cases (one in each 'src/test/cases/' subdirectory)
+    * passibly by calling `ant run-reference-cases` (which will use the previous script),
+  * so that once finished, all directories 'src/test/cases/MyTestCase.in/' will contain these files & dirs:
+    * 'input/' which contains all input files (which includes MyTestCase.in file also)
+    * 'output/' which contains all output files
+    * 'info.txt' which contains optional informations about the run (without output values extracted for now)
+7. Now you can fill the __'src/main/io/MyPlugin.ioplugin'__ file with parsing of output values:
+    ```
+    variableStartSymbol=$
+    variableLimit=(...)
+    formulaStartSymbol=@
+    formulaLimit={...}
+    commentLineChar=#
+    
+    datasetFilter=contains("(.*)","print\\(")
+    
+    outputlist=x y z
+    output.x.get=lines("(.*)out") >> filter("^x=(.*)") >> after("=")
+    output.y.get=lines("(.*)out") >> filter("^y=(.*)") >> after("=")
+    output.z.get=lines("(.*)out") >> filter("^z=(.*)") >> after("=")
+    ```
+    Note that `output.XXX.get=` syntax is a pipe suite expression wich API is given in [plugin API](../io_parser/). In order to check these expressions, you can test instantly your plugin behavior using the `ant read-output-tests` and `ant parse-input-tests` from plugin directory.
+  * Once stable, you can append the extracted output (from `ant read-output-tests` result) as new keys in __'info.txt'__:
+```
+...
+output.x=1.23
+output.y=4.56
+output.z=7.89
+```
+    so that this test case is now complete.
+8. Check all test cases using `ant test`, which returns a json report, and should __not__ finished by `FAILED`
+9. Provide some sample case files in __'src/main/samples/OneSample.in'__.
+
+
+### Integration & Distribution
+
+
+
+

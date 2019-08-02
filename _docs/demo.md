@@ -50,12 +50,13 @@ end NewtonCooling;
 </code></pre>
 ... and now play with this 'functional' wraping ...
 
-## Command-line 
+<hr/>
 
 We use `Funz.sh` (or `Funz.bat`) to launch Funz calculations from command-line `bash` (or `cmd.exe`).
+You can also get the same results using R, python or Java scripts, with adapted commands. 
 
 
-### Basic parametric run
+## Basic parametric run
 
 Launching 4 calculations for different `convection` values (0.5, 0.6, 0.7, 0.8) is done as follows:
 ```bash
@@ -74,7 +75,7 @@ and returns:
 ```
 
 
-### Algorithm-driven root finding
+## Algorithm-driven root finding
 
 Now we will ask a (quite simple) algorithm to find the `convection` value leading to `min(T) = 0.3` (with relative precision of 0.01 on `convection` value):
 ```bash
@@ -87,12 +88,3 @@ which returns:
 ```
 
 
-## Python
-
-
-
-## R
-
-
-
-## Java (API)

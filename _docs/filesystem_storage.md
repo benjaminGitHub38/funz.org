@@ -1,6 +1,6 @@
 ---
 title: Storage
-permalink: /docs/storage/
+permalink: /docs/filesystem_storage/
 ---
 
 ## a

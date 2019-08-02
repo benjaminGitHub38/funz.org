@@ -44,6 +44,8 @@ Then, depending on the COMMAND, the pattern becomes:
                                                   Text
 --input_variables, -iv        Input variables
                                         Input variables definition 'name=values|model', e.g. x1=0.1,0.2,0.3 x2=0,1 x3=-0.5,-0.6
+--all_combinations, --all     All combinations
+                                        Use a factorial design to compute all combinations of input variables.    
 --run_control, -rc            Run control
                                         Features of the run, e.g. retry=3 cache=/tmp/MyCache archiveFilter="(.*)"
 --monitor_control, -mc        Monitor control

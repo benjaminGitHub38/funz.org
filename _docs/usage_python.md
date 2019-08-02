@@ -52,7 +52,12 @@ Funz 1.9 <build 27/03/2019 15:05>
 ### Using
 
 Main features & functions:
-  * to run external parametric calculations of simulator `model` with input files `input_files`: `Funz_Run()` with following (default) arguments:
+  * to run external parametric calculations of simulator `model` with input files `input_files`: `Funz_Run()` with following arguments: 
+```python
+runFile("Funz.py")
+Funz_init()
+Funz_Run(model,input_files)
+```
 ```python
 model = None
 input_files = None

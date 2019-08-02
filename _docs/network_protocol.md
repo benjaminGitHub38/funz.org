@@ -1,6 +1,6 @@
 ---
 title: Networking
-permalink: /docs/network/
+permalink: /docs/network_protocol/
 ---
 
 ## a
