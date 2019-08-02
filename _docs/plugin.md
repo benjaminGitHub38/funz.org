@@ -30,7 +30,7 @@ These steps will guide you to build a basic plugin, which is sufficient for most
 3. Edit the __'README.md'__ descritpion file:
   * replace 'MyPlugin' by the name of your plugin
   * choose the variable syntax and replace `$(` and `)` (`$` should be replaced by a reserved character unused in the code syntax)
-  * choose the formula syntax and replace `@{` and `}` (`$` should be replaced by a reserved character unused in the code syntax)
+  * choose the formula syntax and replace `@{` and `}` (`@` should be replaced by a reserved character unused in the code syntax)
   * change the comment character `#` by the one used in your code syntax
   * provide a (small & simple) typical input file, containing some parameters
 ```
