@@ -6,9 +6,9 @@ permalink: /docs/plugin/
 ## Overview
 
 Funz 'plugin' is the component that features funz to interact with all external simulation software.
-It mainly provides input/ouput parsing and launch scripts, but can also (optionally) provides a way to follow simulations progress, failover support, ...
+It mainly provides input/output parsing and launch scripts, but can also (optionally) provides a way to follow simulations progress, failover support, ...
 
-For conveniency, a [basic template](https://github.com/Funz/plugin-template) is provided and should be used as a scratch project.
+For convenience, a [basic template](https://github.com/Funz/plugin-template) is provided and should be used as a scratch project.
 
 
 ## Implementation
@@ -26,8 +26,8 @@ These steps will guide you to build a basic plugin, which is sufficient for most
 1. __Checkout__ the plugin template: 
   * [fork from github](https://github.com/Funz/plugin-template/generate) and clone: `git clone https://github.com/MyUserName/plugin-MyPluginName`
   * [download plugin-template directory](https://github.com/Funz/plugin-template/archive/master.zip)
-2. Edit the __'build.xml'__ file to replace `MyPlugin` by the name of you plugin (usualy, the name of the simulation software)
-3. Edit the __'README.md'__ descritpion file:
+2. Edit the __'build.xml'__ file to replace `MyPlugin` by the name of your plugin (usually, the name of the simulation software)
+3. Edit the __'README.md'__ description file:
   * replace 'MyPlugin' by the name of your plugin
   * choose the variable syntax and replace `$(` and `)` (`$` should be replaced by a reserved character unused in the code syntax)
   * choose the formula syntax and replace `@{` and `}` (`$` should be replaced by a reserved character unused in the code syntax)
@@ -40,7 +40,7 @@ These steps will guide you to build a basic plugin, which is sufficient for most
 ...
 ```
   * manually replace 'x1' and 'x2', and run this file with your simulation code to get the output files
-  * select the main ouptut files contanining interest values (eg. by their extension), and give some sample:
+  * select the main output files containing interest values (eg. by their extension), and give some sample:
 ```
 ...
 z= ...
@@ -60,11 +60,11 @@ z= ...
 5. Rename and adapt the shell script to launch the code __'src/main/scripts/MyPlugin.sh'__ and/or __'src/main/scripts/MyPlugin.bat'__,
 6. Provide (at least) one test case in __'src/test/cases/MyTestCase.in/'__, containing all input files of this test case, including the main file which is passed as argument to the '.sh' script:
   * then, launch the simulation on all test cases (one in each 'src/test/cases/' subdirectory)
-    * passibly by calling `ant run-reference-cases` (which will use the previous script),
+        - possibly by calling `ant run-reference-cases` (which will use the previous script),
   * so that once finished, all directories 'src/test/cases/MyTestCase.in/' will contain these files & dirs:
-    * 'input/' which contains all input files (which includes MyTestCase.in file also)
-    * 'output/' which contains all output files
-    * 'info.txt' which contains optional informations about the run (without output values extracted for now)
+        - 'input/' which contains all input files (which includes MyTestCase.in file also)
+        - 'output/' which contains all output files
+        - 'info.txt' which contains optional informations about the run (without output values extracted for now)
 7. Now you can fill the __'src/main/io/MyPlugin.ioplugin'__ file with parsing of output values:
     ```
     variableStartSymbol=$
@@ -94,7 +94,3 @@ output.z=7.89
 
 
 ### Integration & Distribution
-
-
-
-
