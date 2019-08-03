@@ -15,8 +15,9 @@ For convenience, a [basic template](https://github.com/Funz/plugin-template) is 
 
 ### Requirements
 
-* Java 8 Runtime Environment (Dev Kit not needed)
+* Java 8 Runtime Environment (dev Kit not needed)
 * ant
+* [common funz ressource directory](https://github.com/Funz/funz-profile/archive/master.zip)
 * git (for github integration or checkout if needed)
 
 ### Step-by-step
