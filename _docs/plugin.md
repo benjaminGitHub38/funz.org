@@ -16,7 +16,7 @@ For convenience, a [basic template](https://github.com/Funz/plugin-template) is 
 ### Requirements
 
 * Java 8 Runtime Environment (dev Kit not needed)
-* ant
+* [ant](http://ftp.heanet.ie/mirrors/www.apache.org/dist//ant/binaries/apache-ant-1.10.6-bin.zip)
 * [common funz ressource directory](https://github.com/Funz/funz-profile/archive/master.zip)
 * git (for github integration or checkout if needed)
 
@@ -55,8 +55,6 @@ z= ...
     formulaStartSymbol=@
     formulaLimit={...}
     commentLineChar=#
-    
-    datasetFilter=contains("(.*)","print\\(")
     ```
 5. Rename and adapt the shell script to launch the code __'src/main/scripts/MyPlugin.sh'__ and/or __'src/main/scripts/MyPlugin.bat'__,
 6. Provide (at least) one test case in __'src/test/cases/MyTestCase.in/'__, containing all input files of this test case, including the main file which is passed as argument to the '.sh' script:
@@ -73,9 +71,7 @@ z= ...
     formulaStartSymbol=@
     formulaLimit={...}
     commentLineChar=#
-    
-    datasetFilter=contains("(.*)","print\\(")
-    
+        
     outputlist=x y z
     output.x.get=lines("(.*)out") >> filter("^x=(.*)") >> after("=")
     output.y.get=lines("(.*)out") >> filter("^y=(.*)") >> after("=")
