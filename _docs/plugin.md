@@ -48,7 +48,7 @@ z= ...
 ...
 ```
   * describe what output values are read
-4. According to previous choices, rename and implement the __'src/main/io/MyPlugin.ioplugin'__ file:
+4. According to previous choices, rename and implement variable and formula section of the __'src/main/io/MyPlugin.ioplugin'__ file:
     ```
     variableStartSymbol=$
     variableLimit=(...)
@@ -64,7 +64,7 @@ z= ...
         - 'input/' which contains all input files (which includes MyTestCase.in file also)
         - 'output/' which contains all output files
         - 'info.txt' which contains optional informations about the run (without output values extracted for now)
-7. Now you can fill the __'src/main/io/MyPlugin.ioplugin'__ file with parsing of output values:
+7. Now you can fill the output section of the __'src/main/io/MyPlugin.ioplugin'__ file with parsing of output values:
     ```
     variableStartSymbol=$
     variableLimit=(...)
