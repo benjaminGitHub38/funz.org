@@ -60,6 +60,7 @@ z= ...
 6. Provide (at least) one test case in __'src/test/cases/MyTestCase.in/'__, containing all input files of this test case, including the main file which is passed as argument to the '.sh' script:
   * then, launch the simulation on all test cases (one in each 'src/test/cases/' subdirectory)
         - possibly by calling `ant run-reference-cases` (which will use the previous script),
+           * to use ant, users should have downloaded and configured the [common funz ressource directory](https://github.com/Funz/funz-profile/archive/master.zip) 
   * so that once finished, all directories 'src/test/cases/MyTestCase.in/' will contain these files & dirs:
         - 'input/' which contains all input files (which includes MyTestCase.in file also)
         - 'output/' which contains all output files
